@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 import "./globals.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Online Videos",
-  description: "For Students",
+  title: "YO YO HONEY SINGH",
+  description: "For ME",
 };
 
 export default function RootLayout({
