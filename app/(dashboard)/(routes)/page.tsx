@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { SignIn, SignUp, UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import { HomeIcon } from "lucide-react";
 export default function Home() {
   return (
