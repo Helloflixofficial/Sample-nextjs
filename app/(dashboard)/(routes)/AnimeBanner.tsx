@@ -8,15 +8,22 @@ const AnimeBanner: React.FC<{ episodes: AnimeEpisode[] }> = ({ episodes }) => {
     <div className="grid grid-cols-3 gap-4">
       {episodes.length > 0 ? (
         episodes.map((episode) => (
-          <div key={episode.id} className="bg-white rounded-lg shadow-md p-4">
+          <div
+            key={episode.id}
+            className="movie-box bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl"
+          >
             <Image
               src={episode.image}
               alt={episode.title}
               width={200}
               height={200}
             />
-            <h2 className="text-lg font-bold">{episode.title}</h2>
-            <p>Episode: {episode.episodeNumber}</p>
+            <a className="text-blue-400 hover:text-blue-600 inline-block">
+              {episode.title}
+            </a>
+            <p className="text-xl font-semibold mb-2">
+              Episode: {episode.episodeNumber}
+            </p>
           </div>
         ))
       ) : (
