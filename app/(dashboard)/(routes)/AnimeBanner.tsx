@@ -5,7 +5,7 @@ import { AnimeEpisode } from "./types";
 
 const AnimeBanner: React.FC<{ episodes: AnimeEpisode[] }> = ({ episodes }) => {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-6 gap-2 bg-black">
       {episodes.length > 0 ? (
         episodes.map((episode) => (
           <div
@@ -27,7 +27,7 @@ const AnimeBanner: React.FC<{ episodes: AnimeEpisode[] }> = ({ episodes }) => {
           </div>
         ))
       ) : (
-        <p>Loading Anime Episodes...</p>
+        <a>Loading......</a>
       )}
     </div>
   );

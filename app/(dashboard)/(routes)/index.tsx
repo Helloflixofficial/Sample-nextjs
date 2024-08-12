@@ -24,7 +24,6 @@ function HomePage() {
 
   return (
     <div>
-      <h1>Anime Banner</h1>
       <AnimeBanner episodes={episodes} />
     </div>
   );
