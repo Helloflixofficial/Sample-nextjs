@@ -10,8 +10,6 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@radix-ui/react-navigation-menu";
-import { title } from "process";
-import { watch } from "fs";
 
 const AnimeBanner: React.FC<{ episodes: AnimeEpisode[] }> = ({ episodes }) => {
   return (
@@ -28,7 +26,7 @@ const AnimeBanner: React.FC<{ episodes: AnimeEpisode[] }> = ({ episodes }) => {
                         <NavigationMenuLink asChild>
                           <a
                             className="flex bg-black h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                            href={`/anime/gogoanime/watch/${episode.episodeId}`}
+                            href={`/anime/gogoanime/info/${episode.id}`}
                           >
                             <Image
                               src={episode.image}
@@ -52,13 +50,10 @@ const AnimeBanner: React.FC<{ episodes: AnimeEpisode[] }> = ({ episodes }) => {
                     </ul>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div>
-                      <ul className="grid gap-3 p-auto  lg:grid-cols-[.75fr_1fr] bg-white rounded-lg overflow-hidden">
-                        <ListItem href="/docs" title="Introduction">
-                          Re-usable components built using Radix UI and Tailwind
-                          CSS.
-                        </ListItem>
-                      </ul>
+                    <div className="bg-white rounded-lg">
+                      <ListItem href="/" title="Introduction">
+                        <ul> DATA NOT FOUND</ul>
+                      </ListItem>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -78,20 +73,9 @@ const ListItem = React.forwardRef<
   React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, ...props }, ref) => {
   return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground ${className}`}
-          {...props}
-        >
-          <div className="text-sm font-normal leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
+    <>
+      <NavigationMenuLink asChild></NavigationMenuLink>
+    </>
   );
 });
 ListItem.displayName = "ListItem";
