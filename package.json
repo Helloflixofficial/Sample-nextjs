@@ -13,7 +13,7 @@
     "@clerk/nextjs": "^4.24.1",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
-    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.1",
     "@vidstack/react": "^1.11.30",
     "axios": "^1.7.3",
     "class-variance-authority": "^0.7.0",
@@ -25,6 +25,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "shadcn-ui": "^0.9.4",
     "styled-components": "^6.1.12",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
