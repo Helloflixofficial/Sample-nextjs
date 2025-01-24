@@ -1,12 +1,8 @@
-import HomePage from "./index";
-import Nav from "./nav";
-
-
+// import HomePage from "./homepage";
 export default function Home() {
   return (
     <div>
-      <HomePage />
-      <Nav />
+      {/* <HomePage /> */}
     </div>
   );
 }
