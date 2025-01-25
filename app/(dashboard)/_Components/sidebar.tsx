@@ -196,15 +196,10 @@ export default function Component() {
             {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
           <div className=''>
-            <UserButton afterSignOutUrl="/" />
             <h1 className="font-extrabold text-transparent text-3xl sm:text-2x1 xl:text-4xl bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-transparent h-full">
               Any-Watch
             </h1>
-
-
-
           </div>
-
         </header>
         <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></span>
       </div>

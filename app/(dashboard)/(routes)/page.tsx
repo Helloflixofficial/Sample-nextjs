@@ -1,8 +1,8 @@
-// import HomePage from "./homepage";
+import HomePage from "./homepage";
 export default function Home() {
   return (
     <div>
-      {/* <HomePage /> */}
+      <HomePage />
     </div>
   );
 }
