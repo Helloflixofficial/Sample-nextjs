@@ -1,8 +1,11 @@
-import HomePage from "./homepage";
+// import AnimeCard from "./anime-grid";
+
+
+
 export default function Home() {
   return (
     <div>
-      <HomePage />
+      {/* <AnimeCard /> */}
     </div>
   );
 }

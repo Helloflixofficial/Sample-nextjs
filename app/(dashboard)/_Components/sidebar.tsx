@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { ChevronDown, ChevronRight, Home, Lock, Puzzle, BarChart3, Database, Play, Grid, Star, Settings, Menu, X } from 'lucide-react'
 import { UserButton } from '@clerk/nextjs'
+import { AnimeGrid } from '../(routes)/anime-grid'
 
 export default function Component() {
   const [openSections, setOpenSections] = useState({
@@ -78,15 +79,15 @@ export default function Component() {
             <div className="mt-4 space-y-1">
               <div className="px-4 py-2 flex items-center space-x-3 hover:bg-gray-800">
                 <Star className="w-5 h-5 text-blue-400" />
-                <span className="text-blue-400 font-medium">Build with Gemini</span>
-                <span className="text-xs bg-blue-600 px-1 rounded">NEW</span>
+                <span className="text-blue-400 font-medium">Add Favorite</span>
+                <span className="text-xs bg-blue-600 px-1 rounded">Added</span>
               </div>
 
-              <div className="px-4 py-2 text-xs font-medium text-gray-500 uppercase">Project shortcuts</div>
+              <div className="px-4 py-2 text-xs font-medium text-gray-500 uppercase">Settings</div>
 
               <button className="w-full flex items-center px-4 py-2 hover:bg-gray-800">
                 <Lock className="w-5 h-5 mr-3" />
-                Authentication
+                Security
               </button>
 
               <button className="w-full flex items-center px-4 py-2 hover:bg-gray-800">
@@ -94,7 +95,7 @@ export default function Component() {
                 Extensions
               </button>
 
-              <div className="px-4 py-2 text-xs font-medium text-gray-500 uppercase mt-4">Product categories</div>
+              <div className="px-4 py-2 text-xs font-medium text-gray-500 uppercase mt-4">Category</div>
 
               <div>
                 <button
@@ -161,7 +162,7 @@ export default function Component() {
             </div>
 
             <div className="mt-6 px-4">
-              <div className="text-xs font-medium text-gray-500 uppercase">Related development tools</div>
+              <div className="text-xs font-medium text-gray-500 uppercase">Support Us</div>
               <div className="mt-2 space-y-1">
                 <button className="w-full text-left py-2 hover:bg-gray-800 text-sm flex items-center">
                   <span className="w-5 h-5 mr-3 text-blue-400">ID</span>
@@ -182,24 +183,22 @@ export default function Component() {
               <div className="font-semibold">Spark</div>
               <div className="text-sm text-gray-400">No-cost ($0/month)</div>
             </div>
-            <button className="px-3 py-1 bg-[#1a73e8] text-white rounded text-sm hover:bg-blue-600 transition-colors">Upgrade</button>
+            <button className="px-3 py-1 bg-[#1a73e8] text-white rounded text-sm hover:bg-blue-600 transition-colors">ChekOut</button>
           </div>
         </div>
         <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></span>
       </aside>
-
       {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden">
-
         <header className="bg-[#202124] border-b border-gray-700 p-4 flex items-center justify-between">
           <button onClick={toggleSidebar} className="lg:hidden text-white">
             {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+
           </button>
-          <div className=''>
-            <h1 className="font-extrabold text-transparent text-3xl sm:text-2x1 xl:text-4xl bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-transparent h-full">
-              Any-Watch
-            </h1>
+          <div >
+            <AnimeGrid />
           </div>
+
         </header>
         <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></span>
       </div>

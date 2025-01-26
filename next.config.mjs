@@ -2,7 +2,9 @@
 const nextConfig = {
   images: {
     domains: ["gogocdn.net"],
+
   },
 };
 
 export default nextConfig;
+
